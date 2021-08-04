@@ -148,12 +148,9 @@
     <div id="main">
         <div class="text">
             <h6>{leagueName}</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Formed in 2016, this league has brought together several gambling degenerates and "Tacos" and has established itself as a unique, cutthroat place where only the most dedicated fantasy football fanatics can succeed. A cast of 10 all originally located in Cincinnati, but having since spread their roots out due to dystopic corporate greed tearing us apart we now have members in four states. Sadly for some, those states also include Iowa and Kentucky.</p>
+            <p>With a deep roster of offensive and IDP starters required, this is truly no place for the meek. Every day in chat is a revolving door of insults and betrayal. All trades are scrutinized with the most nihilistic of lenses. At least three marks have been slaughtered and replaced here, with two other current marks failing to realize they're just donating their dues every year.</p>
+            <p>Welcome to the Thunderdome, bitch.</p>
         </div>
         <PowerRankings />
     </div>
