@@ -10,19 +10,26 @@
     let nflState = getNflState();
     let podiumsData = getAwards();
 
-
-	$: left = el?.getBoundingClientRect() ? el?.getBoundingClientRect().left  : 0;
-
-    let el;
-    
-    	const getNames = (name, rosterID, currentManagers) => {
+    const getNames = (name, rosterID, currentManagers) => {
 		if(cleanName(name) != cleanName(currentManagers[rosterID].name)) {
 			return `${name}<div class="curOwner">(${currentManagers[rosterID].name})</div>`;
 		}
 		return name;
 	}
 
+    let el, left;
+
+    const resize = (w) => {
+        left = el?.getBoundingClientRect() ? el?.getBoundingClientRect().left  : 0;
+    }
+
+    $: resize(innerWidth);
+
+    let innerWidth;
+
 </script>
+
+<svelte:window bind:innerWidth={innerWidth} />
 
 <style>
     #home {
@@ -148,9 +155,13 @@
     <div id="main">
         <div class="text">
             <h6>{leagueName}</h6>
+<<<<<<< HEAD
             <p>Formed in 2016, this league has brought together several gambling degenerates and "Tacos" and has established itself as a unique, cutthroat place where only the most dedicated fantasy football fanatics can succeed. A cast of 10 all originally located in Cincinnati, but having since spread their roots out due to dystopic corporate greed tearing us apart we now have members in four states. Sadly for some, those states also include Iowa and Kentucky.</p>
             <p>With a deep roster of offensive and IDP starters required, this is truly no place for the meek. Every day in chat is a revolving door of insults and betrayal. All trades are scrutinized with the most nihilistic of lenses. At least three marks have been slaughtered and replaced here, with two other current marks failing to realize they're just donating their dues every year.</p>
             <p>Welcome to the Thunderdome, bitch.</p>
+=======
+            <p>Established in 2016, the Player's Club is home to true gentleman-scholars and unabashed degenerates. Spread across several states, some of those states being literal hell on Earth, the current lineup of owners have proven their dedication to being fantasy football fanatics. Honeymoons, funerals, the birth of children... no event is too big to get in the way of drafting, setting your lineup, or perusing waivers for the next big thing for this group.</p>
+>>>>>>> 6a21f06e7b4a033e93b39f6732378f8b8ee81a93
         </div>
         <PowerRankings />
     </div>
@@ -158,7 +169,7 @@
     <div class="leagueData">
         <div class="homeBanner">
             {#await nflState}
-                <p class="center">Retreiving NFL state...</p>
+                <p class="center">Retrieving NFL state...</p>
                 <LinearProgress indeterminate />
             {:then nflStateData}
                 <p class="center">NFL {nflStateData.season} {nflStateData.week > 0 ? `Week ${nflStateData.week}` : "Preseason"}</p>
@@ -169,7 +180,7 @@
 
         <div id="currentChamp">
             {#await podiumsData}
-                <p class="center">Retreiving awards...</p>
+                <p class="center">Retrieving awards...</p>
                 <LinearProgress indeterminate />
             {:then {podiums, currentManagers}}
                 {#if podiums[0]}

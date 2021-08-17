@@ -2,7 +2,11 @@ import { get } from 'svelte/store';
 import {leagueData} from '$lib/stores';
 
 export const leagueID = "652695358043955200"; // your league ID
+<<<<<<< HEAD
 export const leagueName = "Players Club"; // your league name
+=======
+export const leagueName = "Player's Club"; // your league name
+>>>>>>> 6a21f06e7b4a033e93b39f6732378f8b8ee81a93
 export const dues = 100; // (optional) used in template constitution page
 export const dynasty = true; // true for dynasty leagues, false for redraft and keeper
 
