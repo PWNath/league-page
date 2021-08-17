@@ -329,7 +329,7 @@
 <div class="awards">
 	<h3>{year} Awards</h3>
 
-	<img src="./banner.png" class="banner" alt="The Legends Cup" />
+	<img src="./banner.png" class="banner" alt="The Champion's Cup" />
 
 	<div id="podium">
 		<img src="./podium.png" class="podiumImage" alt="podium" />
@@ -347,25 +347,27 @@
 	</div>
 	<div class="divisions">
 		{#each divisions as division}
-			<div class="division">
-				{#if division.name}
-					<h6>{division.name} Division</h6>
-				{:else}
-					<h6>Regular Season Champion</h6>
-				{/if}
-				<div class="leaderBlock">
-					<img src="{division.manager.avatar}" class="divisionLeader" alt="{division.name} champion" />
-					<img src="./medal.png" class="medal" alt="champion" />
+			{#if division.manager}
+				<div class="division">
+					{#if division.name}
+						<h6>{division.name} Division</h6>
+					{:else}
+						<h6>Regular Season Champion</h6>
+					{/if}
+					<div class="leaderBlock">
+						<img src="{division.manager.avatar}" class="divisionLeader" alt="{division.name} champion" />
+						<img src="./medal.png" class="medal" alt="champion" />
+					</div>
+					<span class="genLabel">{@html getNames(division.manager.name, division.manager.rosterID)}</span>
 				</div>
-				<span class="genLabel">{@html getNames(division.manager.name, division.manager.rosterID)}</span>
-			</div>
+			{/if}
 		{/each}
 	</div>
 
 		<!-- Toilet Bowl -->
 	<div class="toiletParent">
 		
-		<img src="./toilet-banner.png" class="toilet-banner" alt="The Legends Cup" />
+		<img src="./toilet-banner.png" class="toilet-banner" alt="The Toilet Bowl" />
 
 		<div class="toiletBowl">
 			<img src="{toilet.avatar}" class="toiletWinner" alt="toilet bowl winner" />

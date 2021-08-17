@@ -189,29 +189,33 @@ import { goto } from "$app/navigation";
     <div class="team">{user.metadata.team_name ? user.metadata.team_name : user.display_name}</div>
     <div class="spacer" />
     <div class="info">
-        <!-- Favorite team -->
+        <!-- Favorite team (optional) -->
         <div class="infoSlot infoTeam">
-            <div class="infoIcon">
-                <img class="infoImg" src="https://sleepercdn.com/images/team_logos/nfl/{manager.favoriteTeam}.png" alt="favorite team"/>
-            </div>
+            {#if manager.favoriteTeam}
+                <div class="infoIcon">
+                    <img class="infoImg" src="https://sleepercdn.com/images/team_logos/nfl/{manager.favoriteTeam}.png" alt="favorite team"/>
+                </div>
+            {/if}
         </div>
-        <!-- Preffered contact -->
+        <!-- Preferred contact -->
         <div class="infoSlot">
             <div class="infoIcon">
-                <img class="infoImg" src="/{manager.prefferedContact}.png" alt="{manager.prefferedContact}"/>
+                <img class="infoImg" src="/{manager.preferredContact}.png" alt="{manager.preferredContact}"/>
             </div>
             <div class="infoAnswer">
-                {manager.prefferedContact}
+                {manager.preferredContact}
             </div>
         </div>
-        <!-- Rebuild mode -->
+        <!-- Rebuild mode (optional) -->
         <div class="infoSlot infoRebuild">
-            <div class="infoIcon">
-                <img class="infoImg" src="/{manager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
-            </div>
-            <div class="infoAnswer">
-                {manager.mode}
-            </div>
+            {#if manager.mode}
+                <div class="infoIcon">
+                    <img class="infoImg" src="/{manager.mode.replace(' ', '%20')}.png" alt="win now or rebuild"/>
+                </div>
+                <div class="infoAnswer">
+                    {manager.mode}
+                </div>
+            {/if}
         </div>
     </div>
 </div>
